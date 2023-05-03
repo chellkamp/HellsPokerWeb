@@ -1,0 +1,20 @@
+{
+    "name": "hellspoker-web",
+    "type": "module",
+    "version": "0.1.0",
+    "private": "true",
+    "dependencies": {
+        "cross-env": "^7.0.3",
+        "next": "^13.3.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "scripts": {
+        "olddev": "next dev",
+        "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+        "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node RunServer.js",
+        "lint": "next lint",
+        "localhostdev": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development PORT=3000 node RunLocalhost.js",
+        "localhostprod": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production PORT=3000 node RunLocalhost.js"
+    }
+}
