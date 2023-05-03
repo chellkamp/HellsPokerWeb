@@ -1,10 +1,10 @@
-import {createServer} from 'node:http';
-import {parse} from 'node:url';
-import next from 'next';
+const {createServer} = require('node:http');
+const {parse} = require('node:url');
+const next = require('next');
 
 // Starts the web server.
 // The environment variables NODE_ENV and PORT must be set before calling startWebService().
-export default function startWebService() {	
+module.exports = exports = function startWebService() {	
 	
 	const dev = process.env.NODE_ENV !== 'production';
 	const app = next({ dev });

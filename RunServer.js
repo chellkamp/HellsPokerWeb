@@ -1,3 +1,3 @@
-import startWebService from './StartWebService.js';
+const startWebService = require('./StartWebService.js');
 
 startWebService();
