@@ -1,6 +1,5 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const url = require('node:url');
 const startWebService = require('./StartWebService.js');
 
 // The environment variables NODE_ENV and PORT should already be set before executing this file.

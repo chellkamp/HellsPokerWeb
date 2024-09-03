@@ -15,5 +15,10 @@
         "lint": "next lint",
         "localhostdev": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development PORT=3000 node RunLocalhost.js",
         "localhostprod": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production PORT=3000 node RunLocalhost.js"
+    },
+    "devDependencies": {
+        "@types/node": "18.16.3",
+        "@types/react": "18.2.1",
+        "typescript": "5.0.4"
     }
 }

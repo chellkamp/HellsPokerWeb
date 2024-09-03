@@ -2,3 +2,4 @@ node_modules
 build
 .next
 private.config
+next-env.d.ts

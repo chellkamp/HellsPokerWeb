@@ -121,8 +121,7 @@ Function GetFileList {
 
 [String] $zipExePath = "C:\Program Files\7-Zip\7z.exe"
 
-
-[String[]] $ignore = @(
+[String[]] $rawIgnore = @(
     "private.config",
     "build",
     "deploy",
@@ -132,6 +131,13 @@ Function GetFileList {
     "node_modules",
     ".next\cache"
 )
+
+[System.Collections.Generic.List[String]] $ignore = New-Object -TypeName 'System.Collections.Generic.List[String]' -ArgumentList (,$rawIgnore)
+
+If ($development) {
+    $ignore.Add("next-env.d.ts")
+}
+
 
 [String] $baseDir = ".."
 
